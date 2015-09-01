@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>HackUWIN</title>
+            <link rel="stylesheet" href="css/reset.css"/>
+            <link rel="stylesheet" href="css/style.css"/>
+            <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+            
+            <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->
+
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $(".nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+        
+        
+        </head>
+        
+        <body>
+            <header id="header">
+                <div>
+                    <a href="https://www.facebook.com/HackUWIN2014"><img src="images/fb.png" id="fb" width="3%" height="6%"></a>
+                    <a href="https://twitter.com/HackUWIN"><img src="images/twitter.png" id="twitter" width="3%" height="5%"></a>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#register">Register</a></li>
+                            <li><a href="#sponsors">Sponsors</a></li>
+                            <li><a href="#FAQ">FAQ</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#prizes">Prizes</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="force_hackuwin.html">Force HackUWIN</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <!-- Home Page contents -->
+            
+            <div id="home">
+                <div class="content">
+                    <video width="650px" height="450px" controls ><!--autoplay--> 
+                        <source src="video/movie.mp4" type="video/mp4">
+                            <object data="movie.mp4" width="320" height="240">
+                                <embed width="320" height="240" src="movie.swf">
+                            </object>
+                    </video>
+                    <h2><strong>July 25-27, 2014</strong></h2>
+                </div>
+            </div>
+            
+            <!-- Register Page contents -->
+            
+            <div id="register">
+                <div class="content">
+                    <img src="images/hackuwin.png">
+                        <p id="register_btn"><a href="registeropen.html">Register</a></p>
+<!--                        <p id="login_btn"><a href="login.html">Login</a></p>       -->    
+                                
+                </div>
+            </div>
+            
+            <!-- Sponsor Page contents -->
+            
+            <div id="sponsors">
+                <div class="content">
+                    <h2>Sponsors</h2>
+<h4>For Sponsoring us: sponsorship@hackuwin.com <span class="space"></span><a href="resources/Sponsorship.pdf" target="_blank">Click here</a> to download the sponsorship package</h4>                    
+                    <div class="sponsors_categ">
+                        
+                        <h3 class="subtitle fancy"><span>Special Sponsors</span></h3><br>  
+                        
+                        <div class="sponsors_list clearfix" id="sponsors_list_1">
+                            <div class="sponsors_list_item">
+                                <a href="http://www.readyforce.com" target="_blank"><img src="images/sponsors/ready.png"/></a> 
+                            </div>
+                            <div class="sponsors_list_item">
+                                <a href="http://www.wolfram.com/" target="_blank"><img src="images/sponsors/wolf.gif"/></a> 
+                            </div>
+                            <div class="sponsors_list_item">
+                                <a href="http://www.gosphero.com/" target="_blank"><img src="images/sponsors/sphero1.png"/></a> 
+                            </div>                           
+                        </div>
+
+                        <div class="sponsors_list clearfix" id="sponsors_list_2">
+                            <div class="sponsors_list_item">
+                                <a href="https://getpebble.com/" target="_blank"><img src="images/sponsors/pebble.png"/></a> 
+                            </div>
+                            <div class="sponsors_list_item">
+                                <a href="http://www1.uwindsor.ca/epicentre/" target="_blank"><img src="images/sponsors/epic_title_script.jpg"/></a> 
+                            </div>
+                            <div class="sponsors_list_item">
+                                <a href="http://www.uwindsor.ca/" target="_blank"><img src="images/sponsors/UW_Logo_2L_horz.png"/></a> 
+                            </div>
+                        </div>
+                        <div class="sponsors_list clearfix" id="sponsors_list_3">
+                            <div class="sponsors_list_item">
+                                <a href="https://www.ontario.ca/" target="_blank"><img src="images/sponsors/NEW_Ont_logo_blk.png"/></a> 
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="other_sp">
+                    </div>  
+                           
+                </div>
+                    
+             </div>                
+            
+            <!-- FAQ Page contents -->
+            
+            <div id="FAQ">
+                <div class="content">
+                    <h2>FAQs</h2>
+                    <div  id="q_row_1">
+                        <div class="questions">
+                            <h4>What is Hackathon?</h4>
+                            <p>Hackathon is basically made from words Hack & Marathon. Traditionally Hack means use things in such a way that they are not intended. A hackathon is event where teams or individual can participate and build something innovative in limited amount of time.</p>
+                        </div>
+                        <div class="questions">
+                            <h4>What is a HackUWIN?</h4>
+                            <p>HackUWIN is University of Windsor’s Annual Hackathon, organized by the students, for the students. HackUWIN is 36 hours Hackathon organized at University of Windsor.</p>
+                        </div>
+                        <div class="questions" class="last">
+                            <h4>Does it cost anything?</h4>
+                            <p>It is completely FREE!! However, If you are planning for Hardware Hack, that may affect your expenses.</p>
+                        </div>
+                    </div>
+                    <div id="q_row_2">
+                        <div class="questions">
+                            <h4>What should I bring?</h4>
+                            <p>Your Student ID, your laptop (don’t forget your charger!!), a change of clothes, sleeping bags/blankets/pillows, personal items (soap, toothbrush, toothpaste, toiletries, etc.), any required hardware for your project (maybe we will provide some, stay tuned!!). Lastly and most importantly, bring some Ideas, Imagination and Excitement!</p>
+                        </div>
+                        <div class="questions">
+                            <h4>How does application process work?</h4>
+                            <p>Registration will open on 1 June, 2014 and end on 5 July, 2014. We want to invite all registered students but if registrations cross 250 limit we will select according to participants profile. Selected participants will get invitation mail before 18 July, 2014.</p>
+                        </div>
+                        <div class="questions" class="last">
+                            <h4>Who can participate?</h4>
+                            <p>Graduates, Undergraduates and High-School students from anywhere are welcome at HackUWIN. If you don't belong to any of the above categories and really want to come, contact us at contact@hackuwin.com</p>
+                        </div>                        
+                    </div>
+                    <div id="q_row_3">
+                        <div class="questions">
+                            <h4>Are you providing travel reimbursement?</h4>
+                            <p>We are planning to provide buses from near universities. Stay tuned for list of buses. If you have more than 20 participants from one place we love to provide bus from there. For Travel, mail us on travel@hackuwin.com</p>
+                        </div>
+                        <div class="questions">
+                            <h4>What should I do if I don’t have a team?</h4>
+                            <p>Hackuwin is great place to interact with same minded people, so you can find a team within Hackuwin or participate as an individual (as a lone wolf).</p>
+                        </div>
+                        <div class="questions" class="last">
+                            <h4>Do you provide hardware components?</h4>
+                            <p>No, you must bring all the required things for your project like Development Boards, Wires, Soldering Machine, ICs, etc.</p>
+                        </div>
+                    </div>
+                    <div id="q_row_4">
+                        <div class="questions">
+                            <h4>How does the judging work?</h4>
+                            <p>Judging will take place in two categories. First, General Judges will evaluate your hack and select Top 10 hacks. Top 10 teams will give 5 min presentation at closing ceremony and judge by a panel of 5 judges</p>
+                        </div>
+                        <div class="questions">
+                            <h4>Are we allowed to build on past projects?</h4>
+                            <p>No, Hackathon is place where you need to build something new on the spot. So building on your existing project is not allowed. You can use Internet and Open APIs.</p>
+                        </div>
+                        <div class="questions" class="last">
+                            <h4>What should I suppose to build?</h4>
+                            <p>That up to you, you can build whatever you want such as websites, wearable applications, mobile applications, software, hardware hack, anything! HackUWIN is open Hackathon. If you still want a project then you can pick one the problem areas from the sponsor’s.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Schedule Page Contents -->
+            <div id="schedule">
+                <div class="content" >
+                    <h2>Event Schedule</h2>
+<table class="event_schedule">
+    <thead>
+    <tr>
+        <th>Time</th>
+        <th>Date</th>        
+        <th>Day</th>
+        <th>Event</th>
+
+    </tr>
+    </thead>
+    <tr>
+        <td>6:30 PM - 9:30 PM</td>        
+        <td>25 July, 2014</td>
+        <td>Friday</td>
+        <td>Registration</td>    
+    </tr>
+    <tr>
+        <td>8:00 PM - 9:00 PM</td>        
+        <td>25 July, 2014</td>
+        <td>Friday</td>
+        <td>Opening & Hacker Meetup</td>    
+    </tr>        
+    <tr>
+        <td>9:30 PM</td>        
+        <td>25 July, 2014</td>
+        <td>Friday</td>
+        <td>Start Hacking</td>    
+    </tr>
+    
+    <tr>
+        <td>8:00 PM - 11:00 PM</td>        
+        <td>26 July, 2014</td>
+        <td>Saturday</td>
+        <td>Fun Games</td>    
+    </tr>
+    <tr>
+        <td>9:30 AM</td>        
+        <td>27 July, 2014</td>
+        <td>Sunday</td>
+        <td>End Hacking</td>    
+    </tr>
+    <tr>
+        <td>10:00 AM - 11:00 AM</td>        
+        <td>27 July, 2014</td>
+        <td>Sunday</td>
+        <td>General Judging</td>    
+    </tr>
+    
+    
+    <tr>
+        <td>11:00 AM - 12:00 PM</td>        
+        <td>27 July, 2014</td>
+        <td>Sunday</td>
+        <td>Closing Ceremony</td>    
+    </tr>
+    
+
+</table><br><br>
+                </div>
+            </div>
+
+            <!-- Prizes Page contents -->
+            <div id="prizes">
+                <div  class="content">
+                <h2>Prizes</h2>
+                    <div class="prize_row clearfix" id="prize_row_1">
+                        <div class="prize_img">
+                            <img src="images/one.png">
+                        </div>
+                        <div class="prize_list">
+                            <p>Raspberry Pi Starter Kit + 2 Pebble Watch +  Sphero Robot </p>
+
+                        </div>
+                    </div>
+
+                    <div class="prize_row  clearfix" id="prize_row_2">
+                        <div class="prize_img">
+                            <img src="images/two.png">
+                        </div>
+                        <div class="prize_list">
+                        <p>Raspberry Pi Starter Kit + 2 Pebble Watch</p>
+
+                        </div>
+                    </div>
+
+                    <div class="prize_row clearfix" id="prize_row_3">
+                        <div class="prize_img">
+                            <img src="images/three.png">
+                        </div>
+                        <div class="prize_list">
+                        <p>Raspberry Pi Starter Kit + Pebble Watch </p>
+
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+            
+            <!-- Contact Page contents -->
+            
+            <div id="contact" >
+                <div  class="content">
+                    <div class="map">
+                        <h2>Find Us Here</h2>                   
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1475.3899038330155!2d-83.06208484859344!3d42.304563609291876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x41b3951bf96316fa!2sCentre+for+Engineering+Innovation!5e0!3m2!1sen!2sca!4v1400620260355" width="400" height="400" frameborder="0" style="border:0"></iframe>                                      
+                    </div>
+                    <div class="address_column">
+                        <div class="address">
+                            <h2>Address</h2>
+                            <P>University of Windsor<br>
+                            Centre for Engineering Innovation<br>
+                            401 Sunset Avenue<br>
+                            Windsor, ON N9B 3P4<p>
+                        </div>
+                        <div class="email">
+                            <h2>Email</h2>
+                            <p>contact@hackuwin.com</p>                            
+                        </div>                         
+                    </div>
+                </div>                
+            </div>
+
+            <!--footer-->
+            <footer id="final">
+                <div>
+                    <p>&#169; Copyrights are reserved. HackUWIN 2014 & University of Windsor Computer Science Department</p>
+                </div>
+
+            </footer>
+            
+            
+        </body>
+    </html>
+
+
+
+
+
+
+
+
+
+        

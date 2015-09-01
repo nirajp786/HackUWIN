@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>HackUWIN</title>
+            <link rel="stylesheet" href="css/reset.css"/>
+            <link rel="stylesheet" href="css/style.css"/>
+            <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>          
+            <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+            <link rel="stylesheet" type="text/css" href="/code_examples/tutorial.css">
+            <script type="text/javascript">
+
+            function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match!"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+}  </script>
+        
+        </head>
+        
+        <body>
+        
+             <header id="header">
+                <div>
+                    <a href="https://www.facebook.com/HackUWIN2014"><img src="images/fb.png" id="fb" width="3%" height="6%"></a>
+                    <a href="https://twitter.com/HackUWIN"><img src="images/twitter.png" id="twitter" width="3%" height="5%"></a>
+                    <nav class="nav" id="navigation">
+                        <ul>
+                            <li><a href="index.html">Go Home</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <div id="register_page">
+                <div class="content">
+                 
+                    <img src="images/hackuwin.png"></br> 
+                    <form id="reg" action="registerform.php" method="post" enctype="multipart/form-data">
+                    <div class="formItem">
+                        <label for="name">Name<font color="red">*</font></label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="formItem">                        
+                        <label for="email">Email ID<font color="red">*</font></label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="formItem">
+                        <label for="password">Password<font color="red">*</font></label>
+                        <input type="password" id="pass1" name="password" minlength="6" required >
+                    </div>
+                    <div class="formItem">
+                        <label>Re-Enter Password<font color="red">*</font></label>
+                        <input type="password" id="pass2" name="repassword" onkeyup="checkPass(); return false;" minlength="6" required>
+                    </div>
+                    <div class="formItem">
+                        <label>Gender<font color="red">*</font></label>
+                        <input type="radio" name="gender" value="male" required>Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="not_specify">I choose not to specify
+                    </div>
+                    <div class="formItem">
+                        <label>School<font color="red">*</font></label>
+                        <input type="text" name="school" required>
+                    </div>
+                    <div class="formItem">
+                        <label>Liability Wavier<font color="red">*</font>***</label>
+                        <a href="resources/Waiver of Liability for HackUWIN.pdf" target="_blank">Download</a> Liability Wavier<span class="space"></span> <input type="file" name="liability" required>
+                    </div>
+                    <div class="formItem">
+                        <label>Year in School<font color="red">*</font></label>
+                        <input type="radio" name="year" value="freshman" required>Freshman
+                        <input type="radio" name="year" value="sophomore">Sophomore
+                        <input type="radio" name="year" value="junior">Junior
+                        <input type="radio" name="year" value="senior">Senior
+                        <input type="radio" name="year" value="grad">Grad
+                        <input type="radio" name="year" value="high_school">High School
+                    </div>
+                    <div class="formItem">
+                    <label>Resume**</label>
+                    <input type=button onclick="window.open('http://www.readyforce.com/i/538b5f80067c115e05c930d1')" value='Submit at ReadyForce Folder'>
+                    </div>
+                 
+                    <div class="formItem">
+                        <label>LinkedIn</label>
+                        <input type="url" name="linkedin" >
+                    </div>
+                    <div class="formItem">
+                        <label>GitHub</label>
+                        <input type="url" name="github" >
+                    </div>
+                    <div class="formItem">
+                        <label>Personal Website</label>
+                        <input type="url" name="personal_website">
+                    </div>
+                    <div class="formItem">
+                        <label>Shirt Size<font color="red">*</font></label>
+                        <input type="radio" name="shirt_size" value="xs" required>XS
+                        <input type="radio" name="shirt_size" value="s">S
+                        <input type="radio" name="shirt_size" value="m">M
+                        <input type="radio" name="shirt_size" value="l">L
+                        <input type="radio" name="shirt_size" value="xl">XL
+                        <input type="radio" name="shirt_size" value="xxl">XXL
+                    </div>
+                    <div class="formItem">
+                        <label>Diet<font color="red">*</font></label>
+                        <input type="radio" name="diet" value="veg" required>Vegetarian
+                        <input type="radio" name="diet" value="non-veg">Non Vegetarian
+                        <input type="radio" name="diet" value="vegan">Vegan
+                    </div>
+                    <div class="formItem">
+                        <label>Previous Hackathon Experience</label>
+                        <textarea name="experience" id="comment"></textarea>
+                    </div>
+                    <div class="formItem">
+                        <label><font color="red">*</font></label>
+                        This field is mandatory.
+                    </div>
+                    <div class="formItem">
+                        <label>**</label>
+                        Submitting Resume on ReadyForce is mandatory.
+                    </div>
+                    <div class="formItem">
+                        <label>***</label>
+                        Upload Wavier with file name as {Your Name}-{Last 4 Digit of Cell No.}.
+                    </div>
+                        <input type="submit" id="submit" name="submit" value="Register">
+                    </form>
+                </div>                
+            </div>                       
+        </body>
+    </html>
+            
+            
+                    
+<!--onclick="redirect();" -->
+
+
+
+
+
+
+
+
+
+        

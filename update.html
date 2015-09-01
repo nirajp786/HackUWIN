@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>HackUWIN</title>
+            <link rel="stylesheet" href="css/reset.css"/>
+            <link rel="stylesheet" href="css/style.css"/>
+            <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+            
+            <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            
+            <script>
+function redirect()
+{
+
+window.location.href="register_successful.html";
+}
+</script>
+        </head>
+        
+        <body>
+        
+             <header id="header">
+                <div>
+                    <a href="https://www.facebook.com/HackUWIN2014"><img src="images/fb.png" id="fb" width="3%" height="6%"></a>
+                    <a href="https://twitter.com/HackUWIN"><img src="images/twitter.png" id="twitter" width="3%" height="5%"></a>
+                    <nav class="nav" id="navigation">
+                        <ul>
+                            <li><a href="index.html">Go Home</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <div id="register_page">
+                <div class="content">
+                 
+                    <img src="images/hackuwin.png"></br>
+                    <form action="demo_form.asp" method="get">
+                        <span style="padding-right:180px">Name</span><input type="text" name="name"><br>                        
+                        <span style="padding-right:163px">Email ID</span><input type="email" name="email"><br>
+                        <span style="padding-right:154px">Password</span><input type="password" name="pwd" maxlength="8"><br>
+                        <span style="padding-right:87px">Re-Enter Password</span><input type="password" name="pwd" maxlength="8"><br>
+                        Gender<span style="padding-right:173px"></span><input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="not_specify">I choose not to specify<br>
+                        <span style="padding-right:175px">School</span> <input type="text" name="school"><br>
+                        Year in School<span style="padding-right:133px"></span><input type="radio" name="year" value="freshman">Freshman
+                        <input type="radio" name="year" value="sophomore">Sophomore
+                        <input type="radio" name="year" value="junior">Junior
+                        <input type="radio" name="year" value="senior">Senior
+                        <input type="radio" name="year" value="grad">Grad
+                        <input type="radio" name="year" value="high_school">High School<br>                     
+                        <span style="padding-right:80px">Upload your Resume</span><input type="file" name="resume"><br>
+                        <span style="padding-right:163px">LinkedIn</span><input type="text" name="linkedin"><br>
+                        <span style="padding-right:176px">GitHub</span><input type="text" name="github"><br>
+                        Shirt Size<span style="padding-right:160px"></span><input type="radio" name="shirt_size" value="xs">XS
+                        <input type="radio" name="shirt_size" value="s">S
+                        <input type="radio" name="shirt_size" value="m">M
+                        <input type="radio" name="shirt_size" value="l">L
+                        <input type="radio" name="shirt_size" value="xl">XL
+                        <input type="radio" name="shirt_size" value="xxl">XXL<br>
+                        Diet<span style="padding-right:197px"></span><input type="radio" name="diet" value="veg">Vegetarian
+                        <input type="radio" name="diet" value="non-veg">Non Vegetarian
+                        <input type="radio" name="diet" value="vegan">Vegan<br>
+                        Previous Hackathon Experience<span style="padding-right:7px"></span><textarea name="text" id="comment"></textarea>
+                        <input type="submit" value="Update" onclick="redirect();">
+                    </form>
+                </div>
+                
+            </div>
+            
+                      
+        </body>
+    </html>
+            
+            
+                    
+
+
+
+
+
+
+
+
+
+
+        
