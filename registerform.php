@@ -1,10 +1,10 @@
 <?php 
 if(isset($_POST['submit']))
 {
-//$server="localhost";
-//$user="patel15i_hack";
-//$db="patel15i_hackuwin";
-//$pass="Kinet_1910";
+	$server="ronakpatel.ipagemysql.com";
+	$user="ronakpatel";
+	$pass="ronakalpha1910";
+	$db="hackuwin";
 
 $con = mysql_connect($server,$user,$pass);
 if(!$con) die("Cannot Connect".mysql_error());
@@ -60,7 +60,7 @@ if ($_FILES["liability"]["error"] > 0) {
   } else {
     
 $newfilename = $name.rand(1,99999).$_FILES["liability"]["name"];
-move_uploaded_file($_FILES["liability"]["tmp_name"], "../uploadwaiver/" . $newfilename);
+move_uploaded_file($_FILES["liability"]["tmp_name"], "uploadwaiver/" . $newfilename);
       //move_uploaded_file($_FILES["liability"]["tmp_name"], "../uploadwaiver/". $_FILES["liability"]["name"]);
     
   }
